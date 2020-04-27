@@ -45,6 +45,12 @@ public class Main {
         System.out.println(arthur.protection()); // 0
         System.out.println(arthur);  // affiche: arthur damage: 20 protection: 0
         //            [excalibur]
+        mordred.setHeroicity(new Heroicity(2, 3)); // 2 sur les dégâts et 3 sur la protection
+        System.out.println(mordred.isHeroic());    // true
+        System.out.println(mordred.damage());      // 14
+        System.out.println(mordred.protection());  // 12
+        System.out.println(mordred);  // affiche: mordred damage: 14 protection: 12
+        //            [hydra, clarent]
 
     }
 
