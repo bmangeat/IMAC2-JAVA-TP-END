@@ -10,18 +10,11 @@ public class Knight {
     final private String _name;
     private Heroicity _heroic;
 
-//    public Knight(String n, Sword w){
-//        if (n.length() == 0) {
-//            throw new IllegalArgumentException("name must contain at least 1 carac");
-//        }
-//        _name = Objects.requireNonNull(n);
-//
-//        _equipements = new ArrayList<Equipement>();
-//
-//        _equipements.add(Objects.requireNonNull(w));
-//        _heroic = new Heroicity(1, 1);
-//    }
-
+    /**
+     * Constructor of knight
+     * @param n Name of the knight
+     * @param w Array of equipments
+     */
     public Knight(String n, Equipement ...w){
         if (n.length() == 0) {
             throw new IllegalArgumentException("name must contain at least 1 carac");
@@ -39,28 +32,11 @@ public class Knight {
         _heroic = new Heroicity(1, 1);
     }
 
-//    public Knight(String n, Equipement w1, Equipement w2, Equipement w3, Equipement w4){
-//        if (n.length() == 0) {
-//            throw new IllegalArgumentException("name must contain at least 1 carac");
-//        }
-//        _name = Objects.requireNonNull(n);
-//
-//        _equipements = new ArrayList<Equipement>();
-//
-//        if (w1 instanceof Shield && w2 instanceof Shield && w3 instanceof Shield && w4 instanceof Shield){
-//            throw new IllegalArgumentException("you can't carry only shield");
-//        }
-//
-//        _equipements.add(Objects.requireNonNull(w1));
-//        _equipements.add(Objects.requireNonNull(w2));
-//        _equipements.add(Objects.requireNonNull(w3));
-//        _equipements.add(Objects.requireNonNull(w4));
-//
-//        _heroic = new Heroicity(1, 1);
-//
-//
-//    }
 
+    /**
+     * Proceed damage depending on equipments and heroicity
+     * @return Damage of the knight
+     */
     public int damage(){
         int result = 0;
         for (Equipement s: _equipements)
@@ -80,6 +56,10 @@ public class Knight {
         return result;
     }
 
+    /**
+     * Proceed protection depending on equipments and heroicity
+     * @return Protection of the knight
+     */
     public int protection(){
         int result = 0;
         for (Equipement s: _equipements){
@@ -100,6 +80,11 @@ public class Knight {
         return _name;
     }
 
+    /**
+     * Compare two knights on damage and protection if they are equal
+     * @param otherKnight
+     * @return Boolean
+     */
     public boolean isBetterThan(Knight otherKnight){
         if(this.damage() == otherKnight.damage() ){
             return this.protection() < otherKnight.protection();
@@ -108,10 +93,12 @@ public class Knight {
         }
     }
 
-    public void setHeroicity(Heroicity h){
-        _heroic = Objects.requireNonNull(h);
-    }
 
+    public void setHeroicity(Heroicity h){ _heroic = Objects.requireNonNull(h); }
+
+    /**
+     * @return Boolean if hero is heroic
+     */
     public boolean isHeroic(){
         return _heroic.isHeroic();
     }
@@ -136,8 +123,6 @@ public class Knight {
         }
 
         sb.append("]");
-
-
         return sb.toString() ;
     }
 }

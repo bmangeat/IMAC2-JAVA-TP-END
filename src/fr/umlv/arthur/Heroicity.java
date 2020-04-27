@@ -1,12 +1,15 @@
 package fr.umlv.arthur;
 
-import java.util.ArrayList;
-import java.util.Objects;
 
 public class Heroicity {
     private final int _damage;
     private final int _protect;
 
+    /**
+     * Contructor of Heroicity
+     * @param a Coef of damage
+     * @param b Coef of protection
+     */
     public Heroicity(int a, int b){
         if (a < 1 && a > 3){
             throw new IllegalArgumentException("value must be between 1 and 3");

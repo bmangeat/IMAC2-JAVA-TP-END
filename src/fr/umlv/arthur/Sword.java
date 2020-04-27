@@ -6,6 +6,11 @@ public class Sword extends Equipement {
     final private int _damage;
     final private String _name;
 
+    /**
+     * Constructor of sword
+     * @param n Name of the sword
+     * @param d Damage of the sword
+     */
     public Sword(String n, int d){
         if(d < 0){
             throw new IllegalArgumentException("value must be positive");
@@ -27,7 +32,6 @@ public class Sword extends Equipement {
         Sword sword = (Sword) o;
         return Objects.equals(_name, sword._name);
     }
-
 
     @Override
     public String toString() {

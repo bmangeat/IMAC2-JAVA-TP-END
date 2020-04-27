@@ -4,6 +4,11 @@ public class Shield extends Equipement {
     final private int _protection;
     final private String _name;
 
+    /**
+     * Constructor of Shield
+     * @param n Name of the shield
+     * @param p Protection provided from the shield
+     */
     public Shield(String n, int p){
         if(p<0){
             throw new IllegalArgumentException("value must be positive");
@@ -15,11 +20,7 @@ public class Shield extends Equipement {
         _name = n;
     }
 
-
-
-    public final int protection() {
-        return _protection;
-    }
+    public final int protection() { return _protection; }
 
     @Override
     public String toString() {
