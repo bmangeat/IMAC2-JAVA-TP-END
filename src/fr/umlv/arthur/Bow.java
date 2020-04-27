@@ -25,7 +25,6 @@ public class Bow extends Equipement {
     public final int protection() {
         return _protection;
     }
-
     public final int damage() {
         return _damage;
     }

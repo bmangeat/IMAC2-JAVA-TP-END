@@ -18,10 +18,7 @@ public class Sword extends Equipement {
 
     }
 
-    public final int damage() {
-        return _damage;
-    }
-
+    public final int damage() { return _damage; }
 
     @Override
     public boolean equals(Object o) {
