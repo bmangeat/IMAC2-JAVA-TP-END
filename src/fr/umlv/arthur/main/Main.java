@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         var excalibur = new Sword("excalibur", 10);
         var arthur = new Knight("arthur", excalibur);
-        //System.out.println(excalibur.name());    // affiche: excalibur
+        System.out.println(excalibur.name());    // affiche: excalibur
         System.out.println(excalibur.damage());  // affiche: 10
         System.out.println(excalibur);           // affiche: excalibur
         System.out.println(arthur.name());       // affiche: arthur

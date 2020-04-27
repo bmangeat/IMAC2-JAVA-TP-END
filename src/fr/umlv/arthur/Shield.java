@@ -21,6 +21,7 @@ public class Shield extends Equipement {
     }
 
     public final int protection() { return _protection; }
+    public final String name() { return _name; }
 
     @Override
     public String toString() {

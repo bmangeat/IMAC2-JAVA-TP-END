@@ -24,6 +24,7 @@ public class Sword extends Equipement {
     }
 
     public final int damage() { return _damage; }
+    public final String name() { return _name; }
 
     @Override
     public boolean equals(Object o) {
